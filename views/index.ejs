@@ -1,0 +1,19 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+	<title></title>
+</head>
+<body><div><h1>Welcome to the World</h1> </div>
+ <% for (i=0; i < countries.length; i++) { %>
+	<div>
+	<b>Country:  </b>  <%= countries[i].name %><Br>
+	<b>Capitol:  </b>   <%= countries[i].capitol %><br> 
+	<b>Population:  </b><%= countries[i].population %> <Br>
+  <img src= "<%= countries[i].flag %> %>" height="100" width="152"><br>	
+<a href="/countries/<%=countries[i].id%>"> Edit/Delete </a> 
+	</div>
+<% } %>
+<div class='center'><a href="/countries/new">Add a new country</a></div>
+
+</body>
+</html>
+

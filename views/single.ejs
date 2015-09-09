@@ -1,0 +1,20 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+	<title></title>
+</head>
+<body>
+	<body><div><h1>Edit or Delete <%= country.name%></h1> </div>
+<div><br/>
+	<form id="update" action="/countries/<%=country.id%>?_method=put" method= "POST">
+	<input type="text" name="country" value= <%= country.name %> ><Br>
+	<input type="text" name="capitol" value=<%= country.capitol %>> <Br>
+	<input type="text" name="population" value= <%= country.population %>> <Br>
+	<input type="text" name="flag" value= <%= country.flag %>> <Br>
+
+	<input class="center" type ="submit"> </div>
+	</form>
+	 <form id='delete' action = "/countries/<%= country.id %>?_method=delete" method='POST'>
+          <button type="submit"> Delete </button>
+        </form>
+</body>
+</html>
